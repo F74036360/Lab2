@@ -1,18 +1,18 @@
 #include <iostream>
-#include <string>
-#include "BMI.h"
+#include <string>//because of using type string
+#include "BMI.h"//which contains BMI class
 using namespace std;
 
-double BMI::vbmi(double cm,double kg)
+double BMI::vbmi(double cm,double kg)//function to get BMI value
 		{
 			double vbmi;
-			vbmi=kg/((cm/100)*(cm/100));
+			vbmi=kg/((cm/100)*(cm/100));//to calculate tje BMI value in type double
 			return vbmi;
 		}
 
-string BMI::sbmi()
+string BMI::sbmi()//function to get BMI category
 		{   
-		    double v=weight/(height*height/10000);
+		    double v=weight/(height*height/10000);//value of BMI
 		    string category;
 		    if(v<15){
 		    	category="Very severely underweight";
@@ -39,7 +39,7 @@ string BMI::sbmi()
 		    return category;
 		}	
 
-void BMI::getdata(double h,double m){
+void BMI::getdata(double h,double m){//read data from file.in and usd them in functions
 			height=h;
 			weight=m;
 		}	
