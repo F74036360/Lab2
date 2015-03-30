@@ -19,7 +19,8 @@ int main() {
 		exit(2);
 	}  
 	while(inFile>>h>>m){//first read data will be allocated in variable h and weight will be the value of m
-		fat.getdata(h,m);//call function from class BMI
+		fat.set();
+                fat.get(h,m);//call function from class BMI
 		a=fat.vbmi(h,m);//BMI value
 		b=fat.sbmi();//BMI category
 		if (h==0||m==0)break;//to prevent functions get a zero ornan value

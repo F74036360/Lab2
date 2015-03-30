@@ -39,8 +39,11 @@ string BMI::sbmi()//function to get BMI category
 		    return category;
 		}	
 
-void BMI::getdata(double h,double m){//read data from file.in and usd them in functions
+void BMI::get(double h,double m){//read data from file.in and usd them in functions
 			height=h;
 			weight=m;
 		}	
-
+void BMI::set(){//initialization
+                        height=0;
+                        weight=0;
+}
